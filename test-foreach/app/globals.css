@@ -39,6 +39,9 @@ body {
     opacity: 0;
     top: 50%;
   }
+  40% {
+    top: 50%;
+  }
   70% {
     opacity: 1;
   }
@@ -55,7 +58,7 @@ body {
   }
   100% {
     opacity: 1;
-    height: 66.66%;
+    height: 50;
     visibility: visible;
   }
 }

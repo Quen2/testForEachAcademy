@@ -22,7 +22,7 @@ export default function Http_code ({httpCode}) {
         
         data.length ?
             setSentence(data[0].message)
-            : setSentence('Erreur inconnue')
+            : setSentence('404 not found')
         
     }
 

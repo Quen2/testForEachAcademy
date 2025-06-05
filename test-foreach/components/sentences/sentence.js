@@ -20,25 +20,24 @@ export default function Sentence () {
             {
                 addANewSentence ?
                 <div className="modal">
-                    <div className="w-3/4 h-3/4 border text-white rounded-2xl p-2">
-                        <p className="text-white text-center">Ajouter une phrase</p>
-                        <AddSentence />
+                    <div className="w-3/4 h-3/4 border text-white rounded-2xl p-2 ">
+                        <AddSentence setAddANewSentence={setAddANewSentence}/>
                     </div>
                 </div> 
                 : <></>
             }
             <div className="flex h-full flex-col">
-                <div className="h-1/3"></div>
-                <p className="text-center absolute text-white text-4xl font-bold mx-auto w-full mainTitle">ItWorksOnMyMachine</p>
+                <div className="h-1/2"></div>
+                <p className="text-center absolute text-white text-xl md:text-4xl font-bold mx-auto w-full mainTitle">ItWorksOnMyMachine</p>
                 {
                     showBtn 
                     ?
                     <div className="text-center generateSentence">
                         {
                             sentence === 'loading' ?
-                            <p className="font-bold text-white text-4xl">Chargement..</p>
+                            <p className="font-bold text-white text-xl md:text-4xl mb-4">Chargement..</p>
                             :
-                            <p className="font-bold text-white text-4xl">{sentence}</p>
+                            <p className="font-bold text-white text-xl md:text-4xl mb-4">{sentence}</p>
                         }
                         <GenerateSentence SetSentence={SetSentence} setAddANewSentence={setAddANewSentence} addANewSentence={addANewSentence}/>
                     </div>

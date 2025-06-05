@@ -1,6 +1,8 @@
 "use client"
 import { useEffect, useState } from "react"
 import { supabase } from "@/lib/supabaseClient"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowsRotate, faPlus } from "@fortawesome/free-solid-svg-icons"
 
 export default function GenerateSentence ({SetSentence, setAddANewSentence, addANewSentence}) {
 
@@ -25,9 +27,9 @@ export default function GenerateSentence ({SetSentence, setAddANewSentence, addA
     }
 
     return (
-        <div className="flex gap-8 text-white text-4xl justify-center">
-            <button onClick={() => setNeedToGenerate(!needToGenerate)} className="cursor-pointer hover:scale-105">O</button>
-            <button onClick={(() => setAddANewSentence(!addANewSentence))} className="cursor-pointer hover:scale-105">+</button>
+        <div className="flex gap-8 text-white text-2xl justify-center">
+            <FontAwesomeIcon icon={faArrowsRotate} onClick={() => setNeedToGenerate(!needToGenerate)} className="cursor-pointer hover:scale-105"/>
+            <FontAwesomeIcon icon={faPlus} onClick={(() => setAddANewSentence(!addANewSentence))} className="cursor-pointer hover:scale-105"/>
         </div>
     )
 }

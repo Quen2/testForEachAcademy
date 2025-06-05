@@ -5,12 +5,13 @@ import { supabase } from "@/lib/supabaseClient"
 export default function GenerateSentence ({SetSentence}) {
 
     const [needToGenerate, setNeedToGenerate] = useState('loading')
+    const randomDelay = Math.floor(Math.random() * 5)
 
     useEffect(() => {
         SetSentence('loading')
         setTimeout(() => {
             getSentence()
-        }, 2000);
+        }, randomDelay * 1000);
     },[needToGenerate])
 
     async function getSentence () {

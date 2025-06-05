@@ -24,3 +24,53 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.generateSentence {
+  animation: hideBtn 3s ease-in forwards;
+}
+
+.mainTitle {
+  animation: titleAspect 3s ease-in forwards;
+}
+
+
+@keyframes titleAspect {
+  0% {
+    opacity: 0;
+    top: 50%;
+  }
+  40% {
+    top: 50%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 2rem;
+    height: 33.33%;
+  }
+}
+
+@keyframes hideBtn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    height: 50;
+    visibility: visible;
+  }
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(23, 23, 23, 0.75);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}

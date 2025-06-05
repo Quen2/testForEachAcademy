@@ -25,7 +25,7 @@ export default function GenerateSentence ({SetSentence}) {
 
     return (
         <div>
-            <button className="text-white text-4xl" onClick={() => setNeedToGenerate(!needToGenerate)}>générer</button>
+            <button className="text-white text-4xl" onClick={() => setNeedToGenerate(!needToGenerate)}>O</button>
         </div>
     )
 }

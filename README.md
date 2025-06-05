@@ -26,7 +26,6 @@ Pour commencer ce projet, il faut cloner le repo, puis ensuite installer les dé
 Une fois les dépendances installées, il faut lancer le projet via :
 
 ```bash
-    npm run build
     npm run dev
 ```
 

@@ -1,10 +1,12 @@
 "use client"
 import { useEffect, useState } from "react"
 import GenerateSentence from "./generate-sentence"
+import AddSentence from "./add-sentence"
 
 export default function Sentence () {
     
     const [sentence, SetSentence] = useState('')
+    const [addANewSentence, setAddANewSentence] = useState(false)
     const [showBtn, setShowBtn] = useState(false)
 
     useEffect(() => {
@@ -15,6 +17,16 @@ export default function Sentence () {
 
     return (
         <div className="w-screen h-screen bg-[#181818]">
+            {
+                addANewSentence ?
+                <div className="modal">
+                    <div className="w-3/4 h-3/4 border text-white rounded-2xl p-2">
+                        <p className="text-white text-center">Ajouter une phrase</p>
+                        <AddSentence />
+                    </div>
+                </div> 
+                : <></>
+            }
             <div className="flex h-full flex-col">
                 <div className="h-1/3"></div>
                 <p className="text-center absolute text-white text-4xl font-bold mx-auto w-full mainTitle">ItWorksOnMyMachine</p>
@@ -28,7 +40,7 @@ export default function Sentence () {
                             :
                             <p className="font-bold text-white text-4xl">{sentence}</p>
                         }
-                        <GenerateSentence SetSentence={SetSentence} />
+                        <GenerateSentence SetSentence={SetSentence} setAddANewSentence={setAddANewSentence} addANewSentence={addANewSentence}/>
                     </div>
                     :
                     <></>

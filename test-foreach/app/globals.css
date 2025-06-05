@@ -59,3 +59,15 @@ body {
     visibility: visible;
   }
 }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(23, 23, 23, 0.75);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
